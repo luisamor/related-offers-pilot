@@ -1,0 +1,79 @@
+<h2 ng-hide="id">Introduce una ID en la url con el formato: <pre>http://dominio/#!/266363</pre></h2>
+
+<section ng-if="offer">
+  <h3>Detail:</h3>
+  <article class="panel panel-default">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Sector</th>
+          <th>FunctionalArea</th>
+          <th>Province</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>{{offer.offerId}}</th>
+          <th>{{offer.sector.name }}</th>
+          <th>{{offer.functionalArea.name }}</th>
+          <th>{{offer.province.name}}</th>
+          <th>{{offer.title}}</th>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+</section>
+
+<section ng-if="relatedOffers">
+  <h3>Related offers:</h3>
+  <article class="panel panel-default">
+    <table class="table table-striped table-condensed table-hover">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Sector</th>
+          <th>FunctionalArea</th>
+          <th>Province</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="offer in relatedOffers">
+          <th>{{offer.offerId}}</th>
+          <th>{{offer.sector.name }}</th>
+          <th>{{offer.functionalArea.name }}</th>
+          <th>{{offer.province.name}}</th>
+          <th>{{offer.title}}</th>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+</section>
+
+<section ng-if="relatedOffers2">
+  <h3>Other related offers:</h3>
+  <article class="panel panel-default">
+    <table class="table table-striped table-condensed table-hover">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Sector</th>
+          <th>FunctionalArea</th>
+          <th>Province</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="offer in relatedOffers2">
+          <th>{{offer.offerId}}</th>
+          <th>{{offer.sector.name }}</th>
+          <th>{{offer.functionalArea.name }}</th>
+          <th>{{offer.province.name}}</th>
+          <th>{{offer.title}}</th>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+</section>
